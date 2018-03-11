@@ -1,1 +1,27 @@
-hola
+<h1>{{title}}</h1>
+<h2>My favorite hero is: </h2>
+<img src="{{heroImageUrl}}" style="height:30px">
+<p>Heroes:</p>
+<ul>
+  <li *ngFor="let hero of heroes">
+    {{ hero.name }} {{ hero.id }}
+  </li>
+</ul>
+<p>The sum of 1 + 1 is {{1 + 1}}</p>
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+<span [hidden]="isUnchanged">changed</span>
+<div *ngFor="let hero of heroes">{{hero.name}}</div>
+<input #heroInput> {{heroInput.value}}
+
+
+<button *ngFor="let hero of heroes" (click)="cambiar(hero)">{{hero.name}}</button>
+
+<p>Hello {{username}}!</p>
+<div [ngClass]="{'special': isSpecial}">
+  <button [style.color]="isSpecial ? 'red' : 'green'">botyo</button>
+</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="heroes[3].name" placeholder="name">
+  </label>
+</div>

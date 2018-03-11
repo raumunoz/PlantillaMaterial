@@ -7,6 +7,8 @@ import {FormsModule} from '@angular/forms';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MaterialInputComponent } from './material-input/material-input.component';
 
+
+
 import {MatToolbarModule,
   MatButtonModule,
   MatIconModule,
@@ -21,6 +23,7 @@ import { MaterialListComponent } from './material-list/material-list.component';
 import { ItemEstudianteComponent } from './material-list/item-estudiante/item-estudiante.component';
 
 
+import {NgForm} from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import { ItemEstudianteComponent } from './material-list/item-estudiante/item-es
     MatInputModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
+    
 
   ],
   exports:[
@@ -46,7 +51,10 @@ import { ItemEstudianteComponent } from './material-list/item-estudiante/item-es
     MatFormFieldModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    
+    
+    
   ],
 
   declarations: [MaterialDemoComponent,ListaComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent]
