@@ -1,0 +1,32 @@
+<h3>Botones normales</h3>
+<div>
+  <button mat-button>Basico</button>
+  <button mat-button color="primary">Promario Basico</button>
+
+
+</div>
+<h3>Botenes elevación</h3>
+<div >
+  <button mat-raised-button [disabled]="!formulario.valido">Basico</button>
+  <button mat-raised-button color="primary" [disabled]="!formulario.valido">Basico</button>
+</div>
+
+<h3>botones con inconos</h3>
+<div>
+  <button mat-icon-button (click)="onClick($event)">
+    <mat-icon>code</mat-icon>
+  </button>
+  <button mat-icon-button (click)="onClick($event)">
+    <mat-icon>lightbulb_outline</mat-icon>
+  </button>
+</div>
+
+<h3>Botones de acción flotantes (FBA)</h3>
+<div>
+  <button mat-fab>
+    <mat-icon>gamepad</mat-icon>
+  </button>
+  <button mat-fab color="primary">
+    <mat-icon>tag_faces</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,55 @@
+<!--<mat-list>
+
+    <mat-list-item>
+        <span mat-line>{{estudiante1.nombre}}</span>
+        <span mat-line>{{estudiante1.ciudad}}</span>
+        <img  mat-line mat-list-avatar src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" >
+      </mat-list-item>
+    
+      <mat-list-item>
+        <span mat-line>{{estudiante2.nombre}}</span>
+        <span mat-line>{{estudiante2.ciudad}}</span>
+        <img *ngIf="estudiante2.foto" mat-line mat-list-avatar [src]="estudiante2.foto" >
+      </mat-list-item>
+    
+      <mat-list-item>
+        <span mat-line>{{estudiante3.nombre}}</span>
+        <span mat-line>{{estudiante3.ciudad}}</span>
+        <img *ngIf="!estudiante3.foto" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" >
+        <img *ngIf="estudiante3.foto" mat-line mat-list-avatar [src]="estudiante3.foto" >
+      </mat-list-item>
+    
+      <mat-list-item>
+        <span mat-line>{{estudiante4.nombre}}</span>
+        <span mat-line>{{estudiante4.ciudad}}</span>
+        <img *ngIf="!estudiante4.foto" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" >
+        <img *ngIf="estudiante4.foto" mat-line mat-list-avatar [src]="estudiante4.foto" >
+      </mat-list-item>
+      
+      <mat-list-item>
+        <span mat-line>{{estudiante5.nombre}}</span>
+        <span mat-line>{{estudiante5.ciudad}}</span>
+        <img mat-line mat-list-avatar [src]="estudiante5.foto" >
+      </mat-list-item>
+    
+      <mat-list-item>
+        <span mat-line>Don pedotes</span>
+        <span mat-line>Grillo</span>
+        <img mat-line mat-list-avatar src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" >
+      </mat-list-item>
+
+  <mat-list-item *ngFor="let estudiante of estudiantes">
+      <span mat-line>{{estudiante.nombre}}</span>
+      <span mat-line>{{estudiante.ciudad}}</span>
+      <img *ngIf="!estudiante.foto" mat-line mat-list-avatar [src]="DEFAULT_PICTURE" >
+      <img *ngIf="estudiante.foto" mat-line mat-list-avatar [src]="estudiante.foto" >
+  </mat-list-item>
+  
+
+</mat-list>-->
+<mat-list (click)="onClick(Estudiante)">
+  <app-item-estudiante *ngFor="let est of estudiantes"
+                    [estudiante]="est"
+                    (onMouseClick)="onMouseClick($event)">
+  </app-item-estudiante>  
+</mat-list>
