@@ -4,8 +4,7 @@
 <p>Heroes:</p>
 <ul>
   <li *ngFor="let hero of heroes">
-    {{ hero.name }}
-    {{ hero.id }}
+    {{ hero.name }} {{ hero.id }}
   </li>
 </ul>
 <p>The sum of 1 + 1 is {{1 + 1}}</p>
@@ -17,9 +16,12 @@
 
 <button *ngFor="let hero of heroes" (click)="cambiar(hero)">{{hero.name}}</button>
 
-
-
 <p>Hello {{username}}!</p>
 <div [ngClass]="{'special': isSpecial}">
   <button [style.color]="isSpecial ? 'red' : 'green'">botyo</button>
+</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="heroes[3].name" placeholder="name">
+  </label>
 </div>

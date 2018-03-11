@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../../hero';
+import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
@@ -7,7 +8,9 @@ import { Hero } from '../../hero';
 })
 export class ListaComponent implements OnInit {
   heroImageUrl = "https://vignette.wikia.nocookie.net/drawtolife/images/d/d5/H%C3%A9roe_2.png/revision/latest?cb=20110312100809&path-prefix=es";
-  
+  selectedHero: Hero;
+
+
   heroes = [
     new Hero(1, 'Windstorm'),
     new Hero(13, 'Bombasto'),
@@ -20,6 +23,10 @@ export class ListaComponent implements OnInit {
   cambiar(hero){
     hero.id++;
   }
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+  
   myHero = this.heroes[0];
 
   constructor() { }
