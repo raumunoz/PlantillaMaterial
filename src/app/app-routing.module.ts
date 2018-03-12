@@ -4,7 +4,7 @@ import { TarjetaComponent }      from './tarjeta/tarjeta.component';
 import { MaterialDemoComponent } from './material/material-demo/material-demo.component'
 import { ListaComponent } from './material/lista/lista.component'
 import { AppComponent } from './app.component';
-
+import { ServicioComponent } from './components/servicio/servicio.component'
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: ListaComponent
+  },
+  {
+    path: 'servicios',
+    component: ServicioComponent
   }
 
 ];

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './/app-routing.module';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { ServicioComponent } from './components/servicio/servicio.component';
+import { DataService } from './shared/services/data.service';
 
 
 
@@ -13,7 +15,8 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    ServicioComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
    
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

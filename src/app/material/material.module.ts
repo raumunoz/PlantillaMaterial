@@ -17,7 +17,8 @@ import {MatToolbarModule,
   MatInputModule,
   MatListModule,
   MatCardModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTabsModule
 } from '@angular/material';
 import { MaterialListComponent } from './material-list/material-list.component';
 import { ItemEstudianteComponent } from './material-list/item-estudiante/item-estudiante.component';
@@ -39,7 +40,8 @@ import {NgForm} from '@angular/forms';
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
     
 
   ],
@@ -52,6 +54,7 @@ import {NgForm} from '@angular/forms';
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatTabsModule
     
     
     

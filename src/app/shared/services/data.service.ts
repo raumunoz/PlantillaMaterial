@@ -10,6 +10,6 @@ export class DataService {
 
 
   myData() {
-    return 'This is my data, man!';
+    return 'datos de servicio';
   }
 }
