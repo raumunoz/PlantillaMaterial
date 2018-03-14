@@ -8,7 +8,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { DataService } from './shared/services/data.service';
-
+import { UsersServiceService } from './shared/services/users-service.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,10 +24,10 @@ import { DataService } from './shared/services/data.service';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-   
+   FormsModule
 
   ],
-  providers: [DataService],
+  providers: [DataService,UsersServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
