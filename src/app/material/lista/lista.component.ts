@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../../hero';
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',

@@ -10,6 +10,8 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 import { DataService } from './shared/services/data.service';
 import { UsersServiceService } from './shared/services/users-service.service';
 import { FormsModule } from '@angular/forms';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { RuterComponent } from './components/ruter/ruter.component';
 
 
 
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     TarjetaComponent,
-    ServicioComponent
+    ServicioComponent,
+    HeroesComponent,
+    RuterComponent
   ],
   imports: [
     BrowserModule,

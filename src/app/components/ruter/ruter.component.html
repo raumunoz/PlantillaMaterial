@@ -1,0 +1,9 @@
+<div class="container"></div>
+
+<h2>Lista de usaurios</h2>
+<ul>
+  <li *ngFor="let user of usuarios"[routerLink]="['detalle',user.name]">
+    {{user.name}}
+  </li>
+  <router-outlet></router-outlet>
+</ul>
