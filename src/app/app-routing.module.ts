@@ -8,6 +8,7 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 import { MaterialListComponent } from'./material/material-list/material-list.component';
 import { RuterComponent }from'./components/ruter/ruter.component';
 import { HeroesComponent }from'./components/heroes/heroes.component'
+import { HttpComponent } from './components/http/http.component'
 const routes: Routes = [
   {
     path: '',
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'servicios',
     component: ServicioComponent
+  },
+  {
+    path: 'http',
+    component: HttpComponent
   },
   {
     path: '**',

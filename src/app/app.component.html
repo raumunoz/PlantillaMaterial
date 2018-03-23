@@ -7,29 +7,27 @@
           {{title}}
         </span>
       </mat-toolbar>
-      <nav>
-        <a>
+      <div class="button-row">
           <button mat-button color="primary" [routerLink]="'/'">
             home
           </button>
-        </a>
-        <a>
-            <button mat-button color="primary" [routerLink]="'tarjeta'">
+            <button mat-raised-button color="acent" [routerLink]="'tarjeta'">
               tarjeta
             </button>
-          </a>
-          <a>
-            <button mat-button color="primary" [routerLink]="'material-demo'">
+            <button  mat-raised-button color="warn" [routerLink]="'material-demo'">
               demo
             </button>
-            <button mat-button color="secondary" [routerLink]="'servicios'">
+            <button mat-raised-button color="primary" [routerLink]="'servicios'">
               servicios
             </button>
-            <button mat-icon-button [routerLink]="'ruter'">
-              <mat-icon>router</mat-icon>
+            <button mat-icon-button color="warn" [routerLink]="'ruter'">
+              <mat-icon aria-label="Example icon-button with a router icon">router</mat-icon>
             </button>
-
-          </a>
-      </nav>
+            
+            <button mat-fab color="accent" color="secondary" [routerLink]="'http'">
+              Http
+            </button>
+        </div>
+      
       
 <router-outlet></router-outlet>

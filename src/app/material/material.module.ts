@@ -6,7 +6,7 @@ import { ListaComponent } from './lista/lista.component';
 import {FormsModule} from '@angular/forms';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MaterialInputComponent } from './material-input/material-input.component';
-
+import { HttpComponent } from '../components/http/http.component'
 
 import {MatToolbarModule,
   MatButtonModule,
@@ -59,6 +59,6 @@ import {NgForm} from '@angular/forms';
     
   ],
 
-  declarations: [MaterialDemoComponent,ListaComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent]
+  declarations: [MaterialDemoComponent,ListaComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent,HttpComponent]
 })
 export class MaterialModule { }

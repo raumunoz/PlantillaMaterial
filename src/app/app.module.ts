@@ -12,6 +12,7 @@ import { UsersServiceService } from './shared/services/users-service.service';
 import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { RuterComponent } from './components/ruter/ruter.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,14 +22,16 @@ import { RuterComponent } from './components/ruter/ruter.component';
     TarjetaComponent,
     ServicioComponent,
     HeroesComponent,
-    RuterComponent
+    RuterComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-   FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [DataService,UsersServiceService],
