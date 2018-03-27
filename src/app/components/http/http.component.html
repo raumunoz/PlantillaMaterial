@@ -1,16 +1,36 @@
 
-  
-  <button mat-mini-fab >
-    <mat-icon aria-label="buscar" (click)="buscar()">search</mat-icon>
-  </button>
-
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
+    <input #inputBusqueda matInput placeholder="Busca gif" >
 
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
+  <button mat-mini-fab (click)="buscar(inputBusqueda.value)">
+    <mat-icon aria-label="buscar" (click)="buscar()">search</mat-icon>
+  </button>
+  {{busqueda}}
 </form>
 
+
+<div *ngIf="exito; else other_content" >
+  <div *ngFor="let res of _respuesta.data; let i = index"class="contenedorTarjeta" >
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{res.slug}}</mat-card-title>
+        <mat-card-subtitle>{{res.import_datetime}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{res.images.downsized_medium.url}}" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <a href="{{res.source_post_url}}">{{res.source_tld}}</a> 
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> {{i}}
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+</div>
+
+
+<ng-template #other_content>other content here...</ng-template>

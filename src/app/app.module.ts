@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { RuterComponent } from './components/ruter/ruter.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -31,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+   HttpClientModule,
+   CommonModule
+   
 
   ],
   providers: [DataService,UsersServiceService],
