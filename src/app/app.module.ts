@@ -12,9 +12,9 @@ import { UsersServiceService } from './shared/services/users-service.service';
 import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { RuterComponent } from './components/ruter/ruter.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
+import { GithubInterceptor } from './components/http/github.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,11 @@ import { CommonModule } from '@angular/common';
    
 
   ],
-  providers: [DataService,UsersServiceService],
+  providers: [DataService,UsersServiceService,{
+    provide:HTTP_INTERCEPTORS,
+    useClass:GithubInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
