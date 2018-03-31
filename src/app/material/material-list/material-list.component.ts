@@ -70,4 +70,7 @@ export class MaterialListComponent implements OnInit {
   onMouseClick($event:Estudiante){
     console.log('Click on: ', $event);
   }
+  onClick(estudiante:Estudiante[]){
+    console.log(estudiante);
+  }
 }

@@ -20,7 +20,9 @@ export class MaterialInputComponent implements OnInit {
   ,5000);
   }
   onKeyUp($event){
-    console.log('keyUp', $event)
+    console.log('keyUp', $event);
   }
-
+  onBlur($event){
+    console.log( $event);
+  }
 }

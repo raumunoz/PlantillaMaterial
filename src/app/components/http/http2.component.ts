@@ -22,15 +22,15 @@ export class Http2Component implements OnInit {
             'First', 'Second', 'Third'
         ]
     }
-    title = 'Tour of Heroes';
-    myHero = 'Windstorm';
+    title = 'nada por mostrar';
+    myHero = 'RAu';
     constructor(private httpClient: HttpClient) {
        
 
     }
     ngOnInit():void {
         
-        this.httpClient.get<UserResponse>('https://api.github.com/users/raumunoz').subscribe(
+        /*this.httpClient.get<UserResponse>('https://api.github.com/users/raumunoz').subscribe(
           data=>{
             
             console.log("USer "+data.login);
@@ -44,6 +44,6 @@ export class Http2Component implements OnInit {
             console.log("Error del lado del Servidor");
           }
         }
-        )
+        )*/
       }
 }

@@ -47,7 +47,7 @@
   
 
 </mat-list>-->
-<mat-list (click)="onClick(Estudiante)">
+<mat-list (click)="onClick(estudiantes)">
   <app-item-estudiante *ngFor="let est of estudiantes"
                     [estudiante]="est"
                     (onMouseClick)="onMouseClick($event)">

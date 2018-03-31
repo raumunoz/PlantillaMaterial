@@ -9,8 +9,10 @@ import { RouterModule } from '@angular/router';
 export class ListaComponent implements OnInit {
   heroImageUrl = "https://vignette.wikia.nocookie.net/drawtolife/images/d/d5/H%C3%A9roe_2.png/revision/latest?cb=20110312100809&path-prefix=es";
   selectedHero: Hero;
-
-  
+  title="HOla";
+  isUnchanged=true;
+  username="RAu"
+  isSpecial=true;
   heroes = [
     new Hero(1, 'Windstorm'),
     new Hero(13, 'Bombasto'),
