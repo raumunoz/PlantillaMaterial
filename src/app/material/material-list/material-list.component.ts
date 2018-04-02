@@ -31,25 +31,25 @@ export class MaterialListComponent implements OnInit {
       id: 2,
       nombre: 'carols',
       ciudad: 'Madrid',
-      foto:'https://i.enkirelations.com/qyPlHeWzU4ZSkQCWG92Lbagjbvc=/800x0//images/2017/04/106a857b4bfd8bac3eb570ef4563112b.jpg'
+      foto:''
     };
     this.estudiante3={
       id: 3,
       nombre: 'Marisol',
       ciudad: 'Quito',
-      foto:'http://en.arabwomanmag.com/wp-content/uploads/2016/03/Noora.Passport.Pic-Arab-Woman-Platform.jpg'
+      foto:'../../shared/imagenes/gato.jpg'
     };
     this.estudiante4={
       id: 4,
       nombre: 'ferras',
       ciudad: 'Lo PAgo',
-      foto:'http://renegado.com.mx/images/stories/Blog/Ferras.jpg'
+      foto:'../../shared/imagenes/ferras.jpeg'
     };
     this.estudiante5={
       id: 5,
       nombre: 'miua ',
       ciudad: 'china',
-      foto:'https://cdn.pixabay.com/photo/2014/04/02/10/42/kitties-304268_960_720.png'
+      foto:'../../shared/imagenes/gato.jpg'
     };
     
     setTimeout(()=>{

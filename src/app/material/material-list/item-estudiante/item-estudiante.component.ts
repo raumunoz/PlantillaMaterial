@@ -8,7 +8,7 @@ import { Estudiante } from '../../../shared/model/estudiante';
   styleUrls: ['./item-estudiante.component.css']
 })
 export class ItemEstudianteComponent implements OnInit {
-  readonly DEFAULT_PICTURE='http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png';
+  readonly DEFAULT_PICTURE='../../shared/imagenes/profile-default-male.png';
   
   @Input()
   estudiante:Estudiante;
