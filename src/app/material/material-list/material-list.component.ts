@@ -37,19 +37,19 @@ export class MaterialListComponent implements OnInit {
       id: 3,
       nombre: 'Marisol',
       ciudad: 'Quito',
-      foto:'../../shared/imagenes/gato.jpg'
+      foto:'../../assets/gato.jpg'
     };
     this.estudiante4={
       id: 4,
       nombre: 'ferras',
       ciudad: 'Lo PAgo',
-      foto:'../../shared/imagenes/ferras.jpeg'
+      foto:'../../assets/ferras.jpeg'
     };
     this.estudiante5={
       id: 5,
       nombre: 'miua ',
       ciudad: 'china',
-      foto:'../../shared/imagenes/gato.jpg'
+      foto:'../../assets/gato.jpg'
     };
     
     setTimeout(()=>{

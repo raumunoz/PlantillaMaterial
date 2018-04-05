@@ -11,7 +11,7 @@
 </form>
 
 
-<div *ngIf="exito; else other _content" >
+<div *ngIf="exito; else other" >
   <div *ngFor="let res of _respuesta.data; let i = index"class="contenedorTarjeta" >
     <mat-card class="example-card">
       <mat-card-header>
@@ -34,4 +34,4 @@
 
 
 
-<div #other _content>Ingresa</div>
+<ng-template #other>Ingresar Texto</ng-template>

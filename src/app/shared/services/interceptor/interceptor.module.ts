@@ -18,7 +18,7 @@ export class InterceptorOne implements HttpInterceptor {
 @Injectable()
 export class InterceptorTwo implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const dupReq=req.clone({headers: req.headers.set('Acces-Control-Allow-Origin','http://worldclockapi.com')});
+    const dupReq=req.clone({headers: req.headers.set('Acces-Control-Allow-Origin','https://worldclockapi.com')});
     return next.handle(req);
     
   }
