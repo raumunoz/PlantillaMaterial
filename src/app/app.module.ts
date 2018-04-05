@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
 import { GithubInterceptor } from './components/http/github.interceptor';
 import { TiempoComponent } from './components/tiempo/tiempo.component';
 import { ClimaService } from './shared/services/clima.service';
-import { InterceptorModule } from './shared/services/interceptor/interceptor.module';
+import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/services/interceptor/interceptor.module';
 
 
 @NgModule({
@@ -45,11 +45,17 @@ import { InterceptorModule } from './shared/services/interceptor/interceptor.mod
 
 
   ],
-  providers: [DataService, , UsersServiceService, {
+  providers: [DataService, Reloj, UsersServiceService, {
     provide: HTTP_INTERCEPTORS,
-    useClass: GithubInterceptor,
+    useClass: InterceptorOne,
     multi: true
-  }],
+  },
+  UsersServiceService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorTwo,
+    multi: true
+  },
+],
 
   bootstrap: [AppComponent]
 })
