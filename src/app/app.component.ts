@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Raudel';
+  hora = '4 25';
   myHero = 'Spiderman';
   num:number =20;
 }
