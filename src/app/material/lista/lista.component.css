@@ -1,0 +1,26 @@
+.cuadro{
+    background-color: aquamarine;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    
+}
+.rojo{
+    color: red;
+}
+.btn-primary{
+    background-color: violet;
+}
+.btn{
+    font-size: 20pX;
+}
+.btn-extra-class{
+    width: 30%;
+    height: 50px;
+    border-style: dotted dashed solid double;
+    border-width: 10px 10px 10px 10px;
+    border-color: red green blue yellow;
+}

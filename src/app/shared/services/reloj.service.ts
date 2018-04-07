@@ -15,7 +15,7 @@ export class Reloj {
       
   
     horaActual() {
-      return this._http.get("https://worldclockapi.com/api/json/est/now")
+      return this._http.get("http://worldclockapi.com/api/json/est/now")
         .map(result => result);
   }
   }

@@ -3,7 +3,7 @@
 <img src="{{heroImageUrl}}" style="height:30px">
 <p>Heroes:</p>
 <ul>
-  <li *ngFor="let hero of heroes" >
+  <li *ngFor="let hero of heroes">
     {{ hero.name }} {{ hero.id }}
   </li>
 </ul>
@@ -19,10 +19,30 @@
 
 <p>Hello {{username}}!</p>
 <div [ngClass]="{'special': isSpecial}">
-  <button [style.color]="isSpecial ? 'red' : 'green'">botyo</button>
+  <button [style.color]="isSpecial ? 'red' : 'green'" (click)="cambio()">botyo</button>
 </div>
+<div class="cuadro" [style.background-color]="color">X</div>
 <div>
   <label>name:
     <input [(ngModel)]="heroes[3].name" placeholder="name">
   </label>
 </div>
+<span [hidden]="isUnchanged">changed</span>
+<img [src]="imagen" alt="">
+<p class="{{clase}}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum atque commodi excepturi veritatis incidunt, esse
+  similique illo molestiae neque non aut cupiditate quas distinctio ducimus ullam dicta doloribus optio!</p>
+<button class="btn" [class.btn-primary]="true" type="submit">Button
+</button>
+<p>Passing an Array of classes:</p>
+<button [ngClass]="['btn', 'btn-primary']">Button</button>
+<button [ngClass]="'btn btn-primary'" type="submit" (click)="cambio()">
+  Button
+</button>
+<button [ngClass]="{ btn:true, 'btn-primary':true }">
+  Button
+</button>
+
+<button (click)="toggleState()">Toggle State</button>
+<p>Obtaining the CSS classes from the component method:</p>
+<button [ngClass]="calculateClasses()" (click)="submit()">Button</button>
+<button [ngStyle]="{background: 'red'}">Button</button>
