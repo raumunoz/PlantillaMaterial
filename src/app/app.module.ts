@@ -12,15 +12,18 @@ import { UsersServiceService } from './shared/services/users-service.service';
 import { Logger } from './shared/services/logger.service';
 import { Reloj } from './shared/services/reloj.service';
 import { FormsModule } from '@angular/forms';
-
+import { ComentariosModule } from './modules/comentarios.module';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { RuterComponent } from './components/ruter/ruter.component';
+
 
 import { CommonModule } from '@angular/common';
 import { GithubInterceptor } from './components/http/github.interceptor';
 import { TiempoComponent } from './components/tiempo/tiempo.component';
 import { ClimaService } from './shared/services/clima.service';
 import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/services/interceptor/interceptor.module';
+
+
 
 
 @NgModule({
@@ -30,8 +33,7 @@ import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/serv
     ServicioComponent,
     HeroesComponent,
     RuterComponent,
-    TiempoComponent
-
+    TiempoComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/serv
     FormsModule,
     HttpClientModule,
     InterceptorModule,
-    CommonModule
+    CommonModule,
+    ComentariosModule
 
 
   ],

@@ -5,6 +5,7 @@ import { MaterialDemoComponent } from './material/material-demo/material-demo.co
 import { ListaComponent } from './material/lista/lista.component'
 import { AppComponent } from './app.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
+import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { MaterialListComponent } from'./material/material-list/material-list.component';
 import { RuterComponent }from'./components/ruter/ruter.component';
 import { HeroesComponent }from'./components/heroes/heroes.component'
@@ -48,10 +49,15 @@ const routes: Routes = [
     component: HttpComponent
   },
   {
+    path: 'comentarios',
+    component: ComentariosComponent
+    
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
-  },
+  }
  
 ];
 
