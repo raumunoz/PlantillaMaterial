@@ -25,12 +25,14 @@ export class TiempoComponent implements OnInit {
  
 
   ngOnInit() {
-    this.reloj.horaActual()
+    this.hora=this.reloj.horaActual();
+    //console.log("la hora actual es "+this.reloj.horaActual());
+    /*this.reloj.horaActual()
       .subscribe(res=>{
         this.respuesta = <cut>res;//un parseo para hacerlo del tipo de la interfaz
         console.log(this.respuesta.dayOfTheWeek);
         this.hora=this.respuesta.currentDateTime;
-      })
+      })*/
 
   }
 

@@ -6,27 +6,36 @@ import {Component, Input, Output, EventEmitter,OnInit} from '@angular/core'
   styleUrls: ['./comentario.component.css']
 })
 export class ComentarioComponent implements OnInit {
-  public nombre:string;
+  comentario:Comentario;
   @Input() titulo:string;
   @Input() fecha:string;
   @Input() mensaje:string
   @Input() likes:number;
-  @Output() emisorTitulo: EventEmitter<String> = new EventEmitter<String>(); //creating an output event
+  @Input() id:string;
+  @Output() emisorComentario: EventEmitter<Comentario> = new EventEmitter<Comentario>(); //creating an output event
   
   constructor() { 
-    this.nombre = "Pueblo de la Toscana";
+    
     
   }
 
   ngOnInit() {
     //this.notify.emit("Hola desde el hijo");
   }
-  borrar(){
-    console.log("Borrar");
-    //this.notify.emit("Hola desde el hijo");
+
+  emitirComentario(event){
+    //event ees el evento que se realizo es decir como clicks duracion y esas cosas
+    
+    this.comentario={id:this.id,
+      titulo:this.titulo,
+      fecha:this.fecha,
+      mensaje:this.mensaje,
+      likes:this.likes}
+
+    console.log("el comentario a enviarce es  "+this.comentario.titulo);
+    console.log("el id es "+ this.id )
+    this.emisorComentario.emit(this.comentario);
   }
-  evento(event, by){
-    this.emisorTitulo.emit(by);
-  }
+  
   
 }

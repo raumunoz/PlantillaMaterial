@@ -14,8 +14,8 @@
 <h2>{{titulo}}</h2>
 <div *ngIf="comentarios?.length > 0; else sinComentarios ">
   <app-comentario *ngFor="let comentario of comentarios" 
-  [titulo]="comentario.titulo" [mensaje]="comentario.mensaje" [fecha]="comentario.fecha" 
-   [likes]="comentario.likes" (emisorTitulo)="tituloHijo($event)" >
+  [titulo]="comentario.titulo" [mensaje]="comentario.mensaje" [fecha]="comentario.fecha"  [id]="comentario.id"
+   [likes]="comentario.likes" (emisorComentario)="recibirComentario($event)" >
 </app-comentario>
 <br />
 
@@ -28,6 +28,3 @@
   <hr>
   <h5>Sin comentarios</h5>
 </ng-template>
-<button mat-fab>
-  <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
-</button>
