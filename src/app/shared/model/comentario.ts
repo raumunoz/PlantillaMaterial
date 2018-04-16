@@ -1,7 +1,10 @@
+
+
 export interface Comentario {
+    id?:string;
     titulo:string;
-    fecha:string;
+    fecha?:string;
     mensaje:string
-    likes:number;
+    likes?:number;
   }
   

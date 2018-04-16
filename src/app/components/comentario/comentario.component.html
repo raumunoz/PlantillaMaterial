@@ -13,10 +13,11 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-icon-button color="warn">
-            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        <button mat-icon-button color="warn"   (click)="evento($event, titulo)">
+            <mat-icon aria-label="Example icon-button with a heart icon" >favorite</mat-icon>
           </button>
           <span>{{likes}}</span>
     </mat-card-actions>
   </mat-card>
+  <br />
   
