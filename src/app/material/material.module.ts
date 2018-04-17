@@ -7,7 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
 import { MaterialInputComponent } from './material-input/material-input.component';
 import { HttpComponent } from '../components/http/http.component';
-
+import { ordenarPipes } from '../shared/ordenarPipe';
 import {MatToolbarModule,
   MatButtonModule,
   MatIconModule,
@@ -18,6 +18,7 @@ import {MatToolbarModule,
   MatCardModule,
   MatProgressSpinnerModule,
   MatTabsModule,
+  
   
 } from '@angular/material';
 import { MaterialListComponent } from './material-list/material-list.component';
@@ -41,7 +42,8 @@ import {NgForm} from '@angular/forms';
     MatCardModule,
     MatProgressSpinnerModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    
     
     
 
@@ -56,11 +58,12 @@ import {NgForm} from '@angular/forms';
     MatCardModule,
     MatProgressSpinnerModule,
     MatTabsModule,
-    MatInputModule
+    MatInputModule,
+    
     
     
   ],
 
-  declarations: [MaterialDemoComponent,ListaComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent,HttpComponent]
+  declarations: [ordenarPipes,MaterialDemoComponent,ListaComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent, ItemEstudianteComponent,HttpComponent]
 })
 export class MaterialModule { }

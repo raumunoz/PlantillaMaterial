@@ -32,9 +32,7 @@ export class HttpComponent implements OnInit {
     this.busqueda = busqueda;
     this.httpClient.get<Gif>(this.url)
       .subscribe(data => {   // data is already a JSON object
-        console.log(data);
-        console.log("Mensaje " + data.meta.msg);
-        console.log(data.data[0].images.original.url);
+       
         this._respuesta = data;
         if (data.meta.msg == 'OK') {
           this.exito = true;
@@ -49,10 +47,14 @@ export class HttpComponent implements OnInit {
             console.log("Error del lado del servidor");
           }
           console.log("un error ocurrio");
-        }
+        },
+        () => {
+          console.log("la subscribcion fue exitosa");
+      }
       );
 
   }
+  
   //la página jsonplaceholder simula un post a un serviocio REST el cual nos regresa la los datos que le mandamos
   req = this.httpClient.post('https://jsonplaceholder.typicode.com/posts', {
     title: 'post',

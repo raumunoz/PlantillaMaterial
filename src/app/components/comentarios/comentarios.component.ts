@@ -12,6 +12,8 @@ import {NgForm} from '@angular/forms';
 export class ComentariosComponent implements OnInit {
   public nombre:string;
   public titulo:string;
+  color = 'primary';
+  mode = 'indeterminate';
 
   comentario:Comentario={
     titulo:'',
@@ -35,10 +37,18 @@ export class ComentariosComponent implements OnInit {
     
     this.comentarioServicio.getComentarios().subscribe(comentarios => {
       this.comentarios=comentarios;
-      console.log(comentarios);
+      console.log("la carga fue existops");
+      
+    },
+    error=>{
+      console.log("error");
+    },
+    ()=>{
+      console.log("termino de cargar los comentarios");
     }
   
     );
+
     this.titulo="";
     
   }

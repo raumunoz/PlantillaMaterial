@@ -13,9 +13,23 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-icon-button color="warn"   (click)="emitirComentario($event)">
+        <button mat-icon-button color="warn"   (click)="emitirComentarioParaBorrar($event)">
             <mat-icon aria-label="Example icon-button with a heart icon" >delete</mat-icon>
           </button>
+          <button mat-icon-button color="accent"   (click)="emitirComentarioParaEditar($event)">
+            <mat-icon aria-label="Example icon-button with a heart icon" >edit mode</mat-icon>
+          </button>
+          <i><div *ngIf="editState">
+
+            <mat-form-field>
+              <input matInput placeholder="nuevo "  [(ngModel)]="name"="tituloNUevo"  >
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="comentario"   ></textarea>
+            </mat-form-field>
+            <button mat-button color="warn"  (click)="emitirParaActualizar()">actualizar</button>
+          
+          </div></i>
           <span>{{likes}}</span>
     </mat-card-actions>
   </mat-card>

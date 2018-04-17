@@ -11,7 +11,7 @@
 
 
 
-<h2>{{titulo}}</h2>
+<h2>{{titulo | uppercase}}</h2>
 <div *ngIf="comentarios?.length > 0; else sinComentarios ">
   <app-comentario *ngFor="let comentario of comentarios" 
   [titulo]="comentario.titulo" [mensaje]="comentario.mensaje" [fecha]="comentario.fecha"  [id]="comentario.id"
@@ -27,4 +27,10 @@
 <ng-template #sinComentarios>
   <hr>
   <h5>Sin comentarios</h5>
+  <mat-progress-spinner
+  class="example-margin"
+  [color]="color"
+  [mode]="mode"
+  >
+</mat-progress-spinner>
 </ng-template>

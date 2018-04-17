@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
-  heroImageUrl = "../../../assets/ferras.jpeg";
+  heroImageUrl = "/../../../assets/ferras.jpeg";
   selectedHero: Hero;
   title="HOla";
   isUnchanged=true;
@@ -44,11 +44,11 @@ export class ListaComponent implements OnInit {
   ngOnInit() {
     this.indice=0;
     this.clase="rojo";
-    this.imagenes=["../../../assets/carlos.jpg",
-    "../../../assets/ferras.jpeg",
-    "../../../assets/gato.jpg",
-    "../../../assets/marisol.jpg",
-    "../../../assets/profile-default-male.png",];
+    this.imagenes=["/../../../assets/carlos.jpg",
+    "/../../../assets/ferras.jpeg",
+    "/../../../assets/gato.jpg",
+    "/../../../assets/marisol.jpg",
+    "/../../../assets/profile-default-male.png",];
     this.imagen=this.imagenes[this.indice];
     this.indice++;
   }

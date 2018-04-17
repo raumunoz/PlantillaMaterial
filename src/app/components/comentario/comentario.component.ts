@@ -7,13 +7,16 @@ import {Component, Input, Output, EventEmitter,OnInit} from '@angular/core'
 })
 export class ComentarioComponent implements OnInit {
   comentario:Comentario;
+  comentarioActualizar:Comentario;
+  tituloNUevo:string;
   @Input() titulo:string;
   @Input() fecha:string;
   @Input() mensaje:string
   @Input() likes:number;
   @Input() id:string;
   @Output() emisorComentario: EventEmitter<Comentario> = new EventEmitter<Comentario>(); //creating an output event
-  
+ // @Output() emisorEstodoEditable: EventEmitter<boolean> = new EventEmitter<boolean>(); //creating an output event
+  editState:boolean=false;
   constructor() { 
     
     
@@ -21,6 +24,12 @@ export class ComentarioComponent implements OnInit {
 
   ngOnInit() {
     //this.notify.emit("Hola desde el hijo");
+    this.comentarioActualizar={
+      titulo: '',
+      fecha:'',
+      mensaje:"",
+      likes:6
+    }
   }
 
   emitirComentario(event){
@@ -37,5 +46,14 @@ export class ComentarioComponent implements OnInit {
     this.emisorComentario.emit(this.comentario);
   }
   
-  
+  emitirComentarioParaEditar(event){
+    this.editState= !this.editState;
+    
+    //this.emisorComentario.emit(this.comentario);
+    
+  }
+  emitirParaActualizar(){
+    this.editState= !this.editState;
+    console.log("titulo para actualizar "+this.tituloNUevo);
+  }
 }

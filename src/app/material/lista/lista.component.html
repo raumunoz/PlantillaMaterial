@@ -15,7 +15,7 @@
 <input #heroInput> {{heroInput.value}}
 
 
-<button *ngFor="let hero of heroes" (click)="cambiar(hero)">{{hero.name}}</button>
+<button *ngFor="let hero of (heroes | sort:'descending')" (click)="cambiar(hero)">{{hero.name}}</button>
 
 <p>Hello {{username}}!</p>
 <div [ngClass]="{'special': isSpecial}">
