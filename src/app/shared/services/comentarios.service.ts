@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs/Observable';
 import { Comentario } from '../model/comentario';
 
+
 @Injectable()
 export class ComentariosService {
   private comentariosCollection: AngularFirestoreCollection<Comentario>;
@@ -47,5 +48,9 @@ export class ComentariosService {
   deleteComentario(comentario:Comentario){
     this.itemDoc=this.afs.doc(`comentarios/${comentario.id}`);//template string
     this.itemDoc.delete();
+  }
+  updateComentario(comentario:Comentario){
+    this.itemDoc=this.afs.doc(`comentarios/${comentario.id}`);//template string
+    this.itemDoc.update(comentario);
   }
 }

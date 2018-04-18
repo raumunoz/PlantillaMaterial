@@ -1,37 +1,53 @@
 <mat-card class="example-card">
-    <mat-card-header>
-        
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{titulo}}</mat-card-title>
-      <mat-card-subtitle>{{fecha}}</mat-card-subtitle>
-    </mat-card-header>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-    
-    <mat-card-content>
-      <p>
-        {{mensaje}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-icon-button color="warn"   (click)="emitirComentarioParaBorrar($event)">
-            <mat-icon aria-label="Example icon-button with a heart icon" >delete</mat-icon>
-          </button>
-          <button mat-icon-button color="accent"   (click)="emitirComentarioParaEditar($event)">
-            <mat-icon aria-label="Example icon-button with a heart icon" >edit mode</mat-icon>
-          </button>
-          <i><div *ngIf="editState">
+  <mat-card-header>
 
-            <mat-form-field>
-              <input matInput placeholder="nuevo "  [(ngModel)]="name"="tituloNUevo"  >
-            </mat-form-field>
-            <mat-form-field>
-              <textarea matInput placeholder="comentario"   ></textarea>
-            </mat-form-field>
-            <button mat-button color="warn"  (click)="emitirParaActualizar()">actualizar</button>
-          
-          </div></i>
-          <span>{{likes}}</span>
-    </mat-card-actions>
-  </mat-card>
-  <br />
-  
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{titulo}}</mat-card-title>
+    <button mat-icon-button color="accent" (click)="abrirSeccionEditar($event)" class="editar">
+      <mat-icon aria-label="Example icon-button with a heart icon">{{icono}}</mat-icon>
+    </button>
+    <mat-card-subtitle>{{fecha}}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+
+ 
+  <mat-card-actions>
+    <button mat-icon-button color="warn">
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </button>
+    {{likes}}
+    
+  </mat-card-actions>
+  <mat-card-content>
+    <p>
+      {{mensaje}}
+    </p>
+    <i>
+      <div *ngIf="editState">
+
+        <mat-form-field>
+          <input matInput placeholder="titulo " [(ngModel)]="tituloNuevo" [formControl]="inputControl">
+          <mat-error *ngIf="inputControl.hasError('required')">
+            el titulo es <strong>requerido</strong> y máximo 15 caracteres
+            <br />
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Mensaje " [(ngModel)]="mensajeNuevo"  [formControl]="mensajeControl">
+          <mat-error *ngIf="mensajeControl.hasError('required')">
+            el titulo es <strong>requerido</strong> y máximo 15 caracteres
+            <br />
+          </mat-error>
+         
+        </mat-form-field>
+        <div>
+          <button mat-button color="warn" (click)="emitirParaActualizar()">Actualizar</button>
+          <button mat-button color="accent" (click)="emitirComentarioParaBorrar()">Borrar</button>
+        </div>
+
+
+      </div>
+    </i>
+  </mat-card-content>
+</mat-card>
+<br />

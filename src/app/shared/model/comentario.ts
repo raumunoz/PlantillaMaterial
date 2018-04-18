@@ -6,6 +6,7 @@ export interface Comentario {
     fecha?:string;
     mensaje:string
     likes?:number;
+    actualizar?:boolean;
     
   }
   

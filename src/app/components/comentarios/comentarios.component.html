@@ -1,9 +1,16 @@
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="titulo"  [(ngModel)]="comentario.titulo" >
+    <input matInput placeholder="titulo" [formControl]="inputControl"  [(ngModel)]="comentario.titulo"  >
+    <mat-error *ngIf="inputControl.hasError('required')">
+      el titulo es <strong>requerido</strong> y máximo 15 caracteres
+      
+    </mat-error>
   </mat-form-field>
   <mat-form-field>
-    <textarea matInput placeholder="comentario"  [(ngModel)]="comentario.mensaje" ></textarea>
+    <textarea matInput placeholder="comentario"  [(ngModel)]="comentario.mensaje" [formControl]="textAreaControl" ></textarea>
+    <mat-error *ngIf="inputControl.hasError('required')">
+      el comentario es <strong>requerido</strong> 
+    </mat-error>
   </mat-form-field>
   <button mat-button color="warn"  (click)="agregarComentario()">enviar</button>
 
