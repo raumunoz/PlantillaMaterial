@@ -13,7 +13,7 @@ import { HttpComponent } from './components/http/http.component'
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   
@@ -55,7 +55,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
  
