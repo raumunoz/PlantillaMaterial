@@ -22,6 +22,7 @@ import { GithubInterceptor } from './components/http/github.interceptor';
 import { TiempoComponent } from './components/tiempo/tiempo.component';
 import { ClimaService } from './shared/services/clima.service';
 import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/services/interceptor/interceptor.module';
+import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 
 
 
@@ -34,6 +35,7 @@ import { InterceptorModule, InterceptorTwo, InterceptorOne } from './shared/serv
     HeroesComponent,
     RuterComponent,
     TiempoComponent,
+    PaginaNoEncontradaComponent,
   ],
   imports: [
     BrowserModule,

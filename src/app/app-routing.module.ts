@@ -8,16 +8,11 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { MaterialListComponent } from'./material/material-list/material-list.component';
 import { RuterComponent }from'./components/ruter/ruter.component';
-import { HeroesComponent }from'./components/heroes/heroes.component'
-import { HttpComponent } from './components/http/http.component'
+import { HeroesComponent }from'./components/heroes/heroes.component';
+import { HttpComponent } from './components/http/http.component';
+import { PaginaNoEncontradaComponent }from './components/pagina-no-encontrada/pagina-no-encontrada.component'
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  
-  
+ 
   {
     path: 'tarjeta',
     component: TarjetaComponent 
@@ -53,17 +48,16 @@ const routes: Routes = [
     component: ComentariosComponent
     
   },
-  {
-    path: '**',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
+  { path: '',
+  redirectTo: '/home',
+   pathMatch: 'full' },
+  { path: '**', component: PaginaNoEncontradaComponent }
  
 ];
 
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes, { enableTracing: true }),],
   exports: [ RouterModule ]
   
 })
